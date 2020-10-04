@@ -1,0 +1,32 @@
+#log{
+
+    font-family: "Ubuntu";
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+/*#pagina{
+
+
+}*/
+
+.contrasenyaCorrecta{
+
+    background-color: #ca8629;  /*Color de fondo */
+
+}
+
+.contrasenyaIncorrecta{
+
+    background-color: #fff;
+
+}
+
+#alerta{
+
+    text-align: center;
+ 
+
+}

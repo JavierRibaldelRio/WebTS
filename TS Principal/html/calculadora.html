@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="../Hojas _Estilos/index.css" />
+
+    <script src="../src/jquery-3.5.1.min.js"></script>
+            
+
+    <style></style>
+  </head>
+  <body>
+
+    <script src="../Scripts JS/Calcular.js"></script>
+
+    <br>
+
+    <br>
+
+    <div style="text-align: center;">
+
+    <table border = 1 class="calculadora">
+
+      <tr>
+
+        <th>EXAMEN</th>
+
+        <th>NOTA</th>
+
+        <th>NOTA SOBRE 10</th>
+
+        <th>TOTAL</th>
+
+      </tr>
+
+      <tr>
+
+        <td>Pokemon</td>
+
+        <td><input type="number" id="notaPokemon"/></td>
+
+        <td><input style="background-color: white; border-color: white; padding: 0%;" id="notaPokemonSobre10" disabled></input> </td>
+
+        <td style="background-color: black;"></td>
+
+      </tr>
+
+      <tr>
+
+        <td>Minecraft</td>
+
+        <td><input type="number" id="notaMinecraft"/></td>
+
+        <td><input style="background-color: white; border-color: white; padding: 0%;" id="notaMinecraftSobre10" disabled></input> </td>
+
+
+        <td style="background-color: black;"></td>
+
+      </tr>
+
+      <tr>
+
+        <td>Total</td>
+
+        <td style="background-color: black;" colspan="2"></td>
+
+        <td><input style="background-color: white; border-color: white; padding: 0%;" id="total" disabled></input> </td>
+
+
+      </tr>
+
+    </table>
+
+    <br>
+
+    <p id="aprovado">
+
+      Enhorabuena!!! has aprobado
+
+    </p>
+
+    <p id="suspenso">
+
+      :-( Lo siento has suspendido
+
+    </p>
+
+  </div>
+
+    <br>
+    
+    <button id="calcular" type="button" class="btn btn-dark">Calcular</button>
+
+    <br>
+
+    <br>
+
+    <a href="pruebas.html" target="_self"><button type="button" class="btn btn-info">Volver</button></a>
+
+    <script src="../Scripts JS/Calcular.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,130 @@
+﻿body {
+    background-color: #ca8629;
+    /*Color de fondo */
+    font-family: Helvetica;
+    /*Fuente*/
+    text-align: justify;
+    /*Texto */
+    margin: 40px;
+    /*Margen*/
+
+}
+
+h1 {
+
+    text-align: center;
+}
+
+
+hr {
+    height: 1px;
+    margin: 5px 0;
+    display: block;
+    clear: both;
+    border: 0 none black;
+    border-top: 1px solid black;
+}
+
+.Introduccion {
+    font-size: medium;
+}
+
+h2 {
+
+    text-align: center;
+}
+
+.TablaContenidos {
+
+    text-align: center;
+    background-color: white;
+    margin: 1px 550px;
+}
+
+.Formulario {
+
+    text-align: center;
+
+}
+
+.ListaReglas {
+
+    line-height: 40px;
+    margin: 1px 400px;
+}
+
+#Menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Menu ul li {
+    background: #2e518b;
+}
+
+#Menu ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px;
+    font-family: Arial;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#Menu ul li {
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#Menu ul li:hover {
+    background: #5b78a7;
+}
+
+#Menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background: #eee;
+    padding: 0%;
+}
+
+#Menu ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+
+#Menu ul li:hover>ul {
+    display: block;
+}
+
+.ListaMiembros {
+    margin: 1px 500px;
+    text-align: left;
+    line-height: 40px;
+}
+
+.calculadora{
+
+    border:black;
+    
+    text-align: center;
+}
+
+#aprovado{
+
+    color: green;
+
+}
+
+#suspenso{
+
+    color: red;
+
+}
