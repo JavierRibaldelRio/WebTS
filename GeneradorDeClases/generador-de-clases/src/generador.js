@@ -13,7 +13,7 @@ class Generador extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = { posibilidades: objetoTotal(), generado: undefined }
+        this.state = { posibilidades: objetoTotal(), generado: undefined, arrayCompanyeros: undefined }
 
 
 
@@ -53,10 +53,25 @@ class Generador extends React.Component {
     eliminarCompanyero(usuario) {
         var arrayAmigos = [...jsonPosibilidades.companyeros];      //Crea una copia del array del json y se lo asigna a uns a variable
 
-        arrayAmigos.map(toLowerCase());
+        var subindiceNombre;    //Almacena el subindie del nombre
+        //Pasa a minusculas todala matriz
 
+        for (var i = 0; i < arrayAmigos.length; i++) {
+
+            arrayAmigos[i] = arrayAmigos[i].toLocaleLowerCase();
+        }
+
+        //almacena el subinndice del nombre, en caso de que no coincidadn ninguno devuelve menos 1
+        subindiceNombre = arrayAmigos.findIndex((arr) => { return arr === usuario; });
+
+        if (subindiceNombre !== -1) {
+            arrayAmigos.splice(subindiceNombre, 1);
+        }
+
+        console.log(arrayAmigos);
+
+        this.setState({ arrayCompanyeros: arrayAmigos });
     }
-
 
 
     render() {
@@ -65,7 +80,7 @@ class Generador extends React.Component {
             <div>
                 <Boton texto="Mostrar estado" alPulsar={this.generarCurso.bind((this))} />
 
-                <PreguntaNombre cogerNombre={() => { console.log("cogo nombre") }} />
+                <PreguntaNombre cogerNombre={this.eliminarCompanyero.bind(this)} />
 
             </div>
         )
