@@ -3,6 +3,7 @@
 import Posibilidad from "./objetoPosibilidad";
 import posibilidades from "./posibilidades.json";
 
+
 function objetoTotal() {
 
 
