@@ -9,7 +9,7 @@ class PreguntaNombre extends React.Component {
 
     //Al cambio se actualiza el estado
     cambio(e) {
-        this.setState({ texto: e.target.value });
+        this.setState({ texto: e.target.value.trim() });
     }
 
     //Evitar que se refresque la página 
@@ -24,7 +24,7 @@ class PreguntaNombre extends React.Component {
         return (
             <form onSubmit={this.alValidar.bind(this)}>
 
-                <input className="input"></input>
+                <input className="input" onChange={this.cambio.bind(this)}></input>
 
                 <Boton type="submit" texto="Validar"></Boton>
             </form>

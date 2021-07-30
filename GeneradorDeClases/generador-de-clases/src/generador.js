@@ -21,7 +21,6 @@ class Generador extends React.Component {
     //Genera el curso y crea el objeto del curso
     generarCurso() {
 
-        console.log("Me ejecuto")
         //copia porpiedades
         var posibilidades = this.state.posibilidades;
 
@@ -48,28 +47,24 @@ class Generador extends React.Component {
         }
     }
 
-    //Coge el nombre del compañero
+    //Elijmina si el nombre de l usuario se encuentra dentro del Array de companyeros
 
     eliminarCompanyero(usuario) {
         var arrayAmigos = [...jsonPosibilidades.companyeros];      //Crea una copia del array del json y se lo asigna a uns a variable
 
-        var subindiceNombre;    //Almacena el subindie del nombre
-        //Pasa a minusculas todala matriz
 
         for (var i = 0; i < arrayAmigos.length; i++) {
 
-            arrayAmigos[i] = arrayAmigos[i].toLocaleLowerCase();
+            //Si coinciden los numeros almacenamos la i
+            if (arrayAmigos[i].toLocaleLowerCase() === usuario.toLocaleLowerCase()) {
+
+
+                arrayAmigos.splice(i, 1); //Elimina la casilla del array
+
+                i = arrayAmigos.length + 10; //Para que el bucle deje de repetirse
+
+            }
         }
-
-        //almacena el subinndice del nombre, en caso de que no coincidadn ninguno devuelve menos 1
-        subindiceNombre = arrayAmigos.findIndex((arr) => { return arr === usuario; });
-
-        if (subindiceNombre !== -1) {
-            arrayAmigos.splice(subindiceNombre, 1);
-        }
-
-        console.log(arrayAmigos);
-
         this.setState({ arrayCompanyeros: arrayAmigos });
     }
 
