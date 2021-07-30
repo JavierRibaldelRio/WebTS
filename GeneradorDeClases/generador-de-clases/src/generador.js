@@ -26,6 +26,10 @@ class Generador extends React.Component {
 
         var a = new Array(); //Almacena los datos del nuevo obejto
 
+        let claseGenerado;  //almacena la clase generada
+
+        let companyero = this.state.arrayCompanyeros[sacarAleatorio[this.state.arrayCompanyeros]]
+
         //Deefine una variable global que al macena todos ls de un arrr
         window.$nombresArrays = ['letras', 'delegado', 'horario', 'tutor', 'ubicacion', 'confinamiento', 'clase'];
         //Saca 1 casilla de cada array aleatrioamente y la s pone juntas en otro array
@@ -34,7 +38,7 @@ class Generador extends React.Component {
             a.push(posibilidades[window.$nombresArrays[i]][sacarAleatorio(posibilidades[window.$nombresArrays[i]])]);
         }
 
-        let claseGenerado = new ClaseGenerada(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7]);
+        claseGenerado = new ClaseGenerada(a[0], a[1], a[2], a[3], a[4], a[5], a[6], this.state.arrayCompanyeros.);
 
         this.setState({ generado: claseGenerado });
 
