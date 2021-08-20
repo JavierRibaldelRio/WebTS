@@ -22,12 +22,24 @@ class PreguntaNombre extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.alValidar.bind(this)}>
+            <div>
+                <h1>Generador de Clases 4ºESO</h1>
+                <table className="Preguntar_Nombre">
+                    <tr>
+                        <td>
+                            <h2>Inserte su nombre</h2>
+                            <form onSubmit={this.alValidar.bind(this)}>
 
-                <input className="input" onChange={this.cambio.bind(this)}></input>
+                                <input className="input" onChange={this.cambio.bind(this)}></input>
 
-                <Boton type="submit" texto="Validar"></Boton>
-            </form>
+                                <br></br>
+
+                                <b><Boton type="submit" texto="Generar Clase"></Boton></b>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         )
     }
 }
