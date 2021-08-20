@@ -1,0 +1,46 @@
+.boton {
+    background-color: #bc0f38;
+    border: #ca002f 3px solid;
+    margin: 20px;
+    border-radius: 20%;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input {
+    margin: 40px;
+}
+
+.Clase_Generada {
+    margin: 0 20%;
+    background-color: palevioletred;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.Preguntar_Nombre {
+    text-align: center;
+    background-color: palevioletred;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+
+/*ID*/
+
+#Frase_Clase {
+    width: 100%;
+}
+
+body {
+    background-color: aquamarine;
+    font-size: 14;
+}
+
+h1 {
+    text-align: center;
+}
+
+#Centrado {
+    text-align: center;
+}

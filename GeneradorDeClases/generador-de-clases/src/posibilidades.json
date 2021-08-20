@@ -1,0 +1,59 @@
+{
+    "letras": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+    ],
+    "delegado": [
+        "Bueno",
+        "tu persona",
+        "Mediocre",
+        "Malo",
+        "Inutil"
+    ],
+    "horario": [
+        "E.F.",
+        "Optativa",
+        "Inglés",
+        "Matemáticas",
+        "Historia",
+        "Física",
+        "Valenciano"
+    ],
+    "tutor": [
+        "Mayte Briz",
+        "Urtzi Arana",
+        "Mercedes Arribas",
+        "Patricia Colín",
+        "Miguel Ángel Zurano"
+    ],
+    "ubicacion": [
+        "de la escalera",
+        "del aula de informática",
+        "de la puerta",
+        "de la sala de profesores",
+        "del depacho de Cristina",
+        "del depacho de Natalia"
+    ],
+    "confinamiento": [
+        "Sí",
+        "No"
+    ],
+    "clase": [
+        "Enorme",
+        "Grande",
+        "Mediana",
+        "Pequeña"
+    ],
+    "companyeros": [
+        "Matteo",
+        "Daniel",
+        "Toni",
+        "Mario",
+        "Carlos",
+        "Hugo",
+        "Javier"
+    ]
+}
