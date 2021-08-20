@@ -3,8 +3,9 @@
     border: #ca002f 3px solid;
     margin: 20px;
     border-radius: 20%;
-    padding: 10%;
+    padding: 40px;
     font-size: 20px;
+    text-align: center;
 }
 
 input {
@@ -37,5 +38,9 @@ body {
 }
 
 h1 {
+    text-align: center;
+}
+
+#Centrado {
     text-align: center;
 }

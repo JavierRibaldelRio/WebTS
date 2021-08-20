@@ -13,7 +13,7 @@ class Generador extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = { posibilidades: objetoTotal(), generado: undefined }
+        this.state = { posibilidades: objetoTotal(), generado: undefined, usuario: undefined }
 
 
 
@@ -21,8 +21,9 @@ class Generador extends React.Component {
     //Genera el curso y crea el objeto del curso
     generarCurso(usuario) {
         if (usuario === undefined) {
-            usuario = "Nada"
+            usuario = "No ha especificado"
         }
+
         var arrayAmigos = [...jsonPosibilidades.companyeros];      //Crea una copia del array del json y se lo asigna a uns a variable
 
         window.$nombresArrays = ['letras', 'delegado', 'horario', 'tutor', 'ubicacion', 'confinamiento', 'clase'];  //almacena el nombre de los arrays
@@ -62,7 +63,7 @@ class Generador extends React.Component {
         }
 
         claseGenerado = new ClaseGenerada(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], companyero);
-        this.setState({ generado: claseGenerado });
+        this.setState({ generado: claseGenerado, usuario: usuario });
 
         //Saca aleatoriamente una casilla del array
         function sacarAleatorio(arr) {
@@ -74,7 +75,11 @@ class Generador extends React.Component {
     }
 
 
+    informar() {
 
+        this.state.generado.pdf(this.state.usuario);
+
+    }
 
     render() {
 
@@ -85,7 +90,8 @@ class Generador extends React.Component {
         if (this.state.generado === undefined) {
             mostrar = <PreguntaNombre cogerNombre={this.generarCurso.bind(this)} />;
         } else {
-            mostrar = <MostrarClaseGenerada clase={this.state.generado} />;
+
+            mostrar = <MostrarClaseGenerada pulsar={this.informar.bind(this)} clase={this.state.generado} />;
         }
 
 
@@ -94,7 +100,7 @@ class Generador extends React.Component {
 
                 {mostrar}
 
-            </div>
+            </div >
         )
 
     }
